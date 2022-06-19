@@ -1,0 +1,63 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./images/quiz-image-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.App {
+    padding-top: 50px;
+    text-align: center;
+}
+.App h2 {
+    padding-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.question-container {
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto
+}
+
+.question h4 {
+    color: white;
+    padding: 10px;
+    border-bottom: 4px solid white;
+}
+
+.submit {
+    padding: 10px ;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(11, 11, 34);
+    border: 2px solid rgb(11, 11, 34);
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.answer {
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.input {
+    margin-right: 5px;
+}
+
+.loading {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}

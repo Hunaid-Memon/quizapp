@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { getQuizDetails } from './services/quiz_service';
 import { QuestionType } from './types/Quiz_types';
-import QuestionCard from './components/QuestionCard'
+import QuestionCard from './components/QuestionCard';
+import loading from './images/loading-buffering.gif'
 
 function App() {
 
@@ -36,10 +37,13 @@ function App() {
     }
   } 
 
-  if(!quiz.length) return <h3>Loading....</h3>
+  if(!quiz.length) return <h3 className='loading' >
+     <img src={loading} alt='Loading...' />
+  </h3>
 
   return (
     <div className="App">
+      <h2>Quiz App</h2>
       <QuestionCard 
         options={quiz[currentStep].option}
         question={quiz[currentStep].question}

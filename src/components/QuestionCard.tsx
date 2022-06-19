@@ -12,18 +12,22 @@ const QuestionCard:React.FC<questionPropsType> = ({ question, options, callback 
     }
 
     return (
-        <div >
-            <div>{question}</div>
-            <form onSubmit={(e:React.FormEvent<EventTarget>) => callback(e, selectedAns) } >
+        <div className='question-container' >
+            <div className='question' >
+               <h4>{question}
+                </h4> 
+            </div>
+            <form className='question-form' onSubmit={(e:React.FormEvent<EventTarget>) => callback(e, selectedAns) } >
                 {
                     options.map((opt:string, ind:number) => {
-                       return <div key={ind}>
+                       return <div key={ind} className='answer' >
                            <label>
                                <input 
                                     type='radio'
                                     name='opt'
                                     value={opt}
                                     required
+                                    className='input'
                                     checked={selectedAns === opt}
                                     onChange={handleSubmit}
                                />
@@ -32,7 +36,7 @@ const QuestionCard:React.FC<questionPropsType> = ({ question, options, callback 
                         </div>
                     })
                 }
-                <input type="submit" />
+                <input className='submit' type="submit" />
             </form>
         </div>
     )
